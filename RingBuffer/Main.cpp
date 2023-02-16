@@ -75,7 +75,7 @@ int wmain(int argc, const wchar_t** argv)
             if (pCur >= pEnd)
                 pCur = testString;
 
-            sizeToDequeue = (int)(((rand() % strLen) + 1) * 0.75);
+            sizeToDequeue = (int)(((rand() % strLen) + 1) * 0.65);
             peekSize = ringBuf.Peek(peekBuf, sizeToDequeue);
             dequeueSize = ringBuf.Dequeue(buf, sizeToDequeue);
 
