@@ -13,12 +13,18 @@
     <ClCompile Include="RingBuffer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="my_profile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RingBuffer.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Main.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_profile.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
