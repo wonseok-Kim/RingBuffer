@@ -3,7 +3,56 @@
 #include "RingBuffer.h"
 #include "my_profile.h"
 
+const char* testPrintf = "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345";
 const char* testString = "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
+                         "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
                          "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
                          "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
                          "1234567890 abcdefghijklmnopqrstuvwxyz 1234567890 abcdefghijklmnopqrstuvwxyz 12345"
@@ -35,39 +84,59 @@ static void TestPerformance2(int _size);
 int wmain(int argc, const wchar_t** argv)
 {
     srand(seed);
-    printf(testString);
+    printf(testPrintf);
     int ignore = _getch();
 
     // TestEnqueDeque();
     // TestMoveFrontRear();
 
+    //{
+    //    TestPerformance1(300);
+    //    printf("\n\n");
+    //    TestPerformance2(300);
+    //    printf("\n\n");
+
+    //    PRO_DATAOUTTEXT(L"300.txt");
+    //}
+
+    //{
+    //    PRO_RESET();
+    //    TestPerformance1(500);
+    //    printf("\n\n");
+    //    TestPerformance2(500);
+    //    printf("\n\n");
+
+    //    PRO_DATAOUTTEXT(L"500.txt");
+    //}
+
+    //{
+    //    PRO_RESET();
+    //    TestPerformance1(1000);
+    //    printf("\n\n");
+    //    TestPerformance2(1000);
+    //    printf("\n\n");
+
+    //    PRO_DATAOUTTEXT(L"1000.txt");
+    //}
+
     {
-        TestPerformance1(300);
+        PRO_RESET();
+        TestPerformance1(2500);
         printf("\n\n");
-        TestPerformance2(300);
+        TestPerformance2(2500);
         printf("\n\n");
 
-        PRO_DATAOUTTEXT(L"300.txt");
+        PRO_DATAOUTTEXT(L"2500.txt");
     }
 
     {
         PRO_RESET();
-        TestPerformance1(500);
+        TestPerformance1(5000);
         printf("\n\n");
-        TestPerformance2(500);
-        printf("\n\n");
-
-        PRO_DATAOUTTEXT(L"500.txt");
-    }
-
-    {
-        PRO_RESET();
-        TestPerformance1(1000);
-        printf("\n\n");
-        TestPerformance2(1000);
+        TestPerformance2(5000);
         printf("\n\n");
 
-        PRO_DATAOUTTEXT(L"1000.txt");
+        PRO_DATAOUTTEXT(L"5000.txt");
     }
 
     return 0;
@@ -310,8 +379,7 @@ void TestPerformance1(int _size)
 {
     pCur = testString;
 
-    constexpr int BUF_SIZE = 2000;
-    RingBuffer ringBuf(BUF_SIZE);
+    RingBuffer ringBuf;
 
     char* buf = new char[strLen + 1];
 
@@ -358,8 +426,7 @@ void TestPerformance2(int _size)
 {
     pCur = testString;
 
-    constexpr int BUF_SIZE = 2000;
-    RingBuffer ringBuf(BUF_SIZE);
+    RingBuffer ringBuf;
 
     char* buf = new char[strLen + 1];
     char* tempBuf;
