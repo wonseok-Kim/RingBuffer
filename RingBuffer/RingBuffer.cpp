@@ -26,6 +26,22 @@ RingBuffer::RingBuffer(int size)
         Init(size);
 }
 
+//void RingBuffer::Resize(int size)
+//{
+//    if (size <= 1)
+//        return;
+//
+//    uint8_t* newBuffer = new uint8_t[size];
+//    m_bufferSize = size;
+//
+//    Dequeue(newBuffer, size);
+//
+//    m_buffer = newBuffer;
+//    m_pFront = newBuffer;
+//    m_pRear = newBuffer;
+//    m_pEndOfBuffer = newBuffer + size;
+//}
+
 int RingBuffer::GetUseSize()
 {
     if (m_pRear >= m_pFront)

@@ -8,7 +8,7 @@ class RingBuffer
     RingBuffer();
     RingBuffer(int size);
 
-    void Resize(int size);
+    //void Resize(int size);
 
     int GetBufferSize()
     {
