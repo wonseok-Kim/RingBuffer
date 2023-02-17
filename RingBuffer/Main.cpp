@@ -35,14 +35,19 @@ static void TestPerformance2(int _size);
 
 int wmain(int argc, const wchar_t** argv)
 {
+    if (argc != 2)
+        return 1;
+
     srand(seed);
     printf(testString);
     int ignore = _getch();
 
-    // TestEnqueDeque();
-    // TestMoveFrontRear();
-    TestPerformance();
+    if (wcscmp(argv[1], L"1"))
+        TestEnqueDeque();   
+    if (wcscmp(argv[1], L"2"))
+        TestMoveFrontRear();
 
+    // TestPerformance();
     return 0;
 }
 
