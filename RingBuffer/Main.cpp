@@ -29,6 +29,7 @@ constexpr int seed = 100;
 
 static void TestEnqueDeque();
 static void TestMoveFrontRear();
+static void TestPerformance();
 static void TestPerformance1(int _size);
 static void TestPerformance2(int _size);
 
@@ -40,35 +41,7 @@ int wmain(int argc, const wchar_t** argv)
 
     // TestEnqueDeque();
     // TestMoveFrontRear();
-
-    {
-        TestPerformance1(300);
-        printf("\n\n");
-        TestPerformance2(300);
-        printf("\n\n");
-
-        PRO_DATAOUTTEXT(L"300.txt");
-    }
-
-    {
-        PRO_RESET();
-        TestPerformance1(500);
-        printf("\n\n");
-        TestPerformance2(500);
-        printf("\n\n");
-
-        PRO_DATAOUTTEXT(L"500.txt");
-    }
-
-    {
-        PRO_RESET();
-        TestPerformance1(1000);
-        printf("\n\n");
-        TestPerformance2(1000);
-        printf("\n\n");
-
-        PRO_DATAOUTTEXT(L"1000.txt");
-    }
+    TestPerformance();
 
     return 0;
 }
@@ -303,6 +276,39 @@ void TestMoveFrontRear()
                 printf(buf);
             }
         }
+    }
+}
+
+void TestPerformance()
+{
+    {
+        PRO_RESET();
+        TestPerformance1(300);
+        printf("\n\n");
+        TestPerformance2(300);
+        printf("\n\n");
+
+        PRO_DATAOUTTEXT(L"300.txt");
+    }
+
+    {
+        PRO_RESET();
+        TestPerformance1(500);
+        printf("\n\n");
+        TestPerformance2(500);
+        printf("\n\n");
+
+        PRO_DATAOUTTEXT(L"500.txt");
+    }
+
+    {
+        PRO_RESET();
+        TestPerformance1(1000);
+        printf("\n\n");
+        TestPerformance2(1000);
+        printf("\n\n");
+
+        PRO_DATAOUTTEXT(L"1000.txt");
     }
 }
 
