@@ -5,7 +5,7 @@
 
 void RingBuffer::Init(int bufferSize)
 {
-    m_buffer = new uint8_t[bufferSize];
+    m_buffer = new char[bufferSize];
     m_bufferSize = bufferSize;
 
     m_pFront = m_buffer;
@@ -26,21 +26,26 @@ RingBuffer::RingBuffer(int size)
         Init(size);
 }
 
-//void RingBuffer::Resize(int size)
+RingBuffer::~RingBuffer()
+{
+    delete[] m_buffer;
+}
+
+// void RingBuffer::Resize(int size)
 //{
-//    if (size <= 1)
-//        return;
+//     if (size <= 1)
+//         return;
 //
-//    uint8_t* newBuffer = new uint8_t[size];
-//    m_bufferSize = size;
+//     uint8_t* newBuffer = new uint8_t[size];
+//     m_bufferSize = size;
 //
-//    Dequeue(newBuffer, size);
+//     Dequeue(newBuffer, size);
 //
-//    m_buffer = newBuffer;
-//    m_pFront = newBuffer;
-//    m_pRear = newBuffer;
-//    m_pEndOfBuffer = newBuffer + size;
-//}
+//     m_buffer = newBuffer;
+//     m_pFront = newBuffer;
+//     m_pRear = newBuffer;
+//     m_pEndOfBuffer = newBuffer + size;
+// }
 
 int RingBuffer::GetUseSize()
 {
@@ -117,7 +122,7 @@ int RingBuffer::Enqueue(const void* data, int size)
     if (size > freeSize)
         size = freeSize;
 
-    uint8_t* src = (uint8_t*)data;
+    char* src = (char*)data;
     const int directEnqueueSize = DirectEnqueueSize();
     int remainSize;
 
@@ -151,7 +156,7 @@ int RingBuffer::Dequeue(void* out_data, int size)
     if (size > useSize)
         size = useSize;
 
-    uint8_t* dst = (uint8_t*)out_data;
+    char* dst = (char*)out_data;
     const int directDequeueSize = DirectDequeueSize();
     int remainSize;
 
@@ -185,8 +190,8 @@ int RingBuffer::Peek(void* out_data, int size)
     if (size > useSize)
         size = useSize;
 
-    uint8_t* dst = (uint8_t*)out_data;
-    uint8_t* src = m_pFront;
+    char* dst = (char*)out_data;
+    char* src = m_pFront;
     const int directDequeueSize = DirectDequeueSize();
     int remainSize;
 
@@ -199,7 +204,7 @@ int RingBuffer::Peek(void* out_data, int size)
         remainSize -= directDequeueSize;
 
         src = m_buffer;
-        memcpy(dst, src, remainSize);        
+        memcpy(dst, src, remainSize);
     }
     else
     {

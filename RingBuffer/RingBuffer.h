@@ -1,14 +1,13 @@
 #pragma once
 
-#include <stdint.h>
-
 class RingBuffer
 {
   public:
     RingBuffer();
     RingBuffer(int size);
+    ~RingBuffer();
 
-    //void Resize(int size);
+    // void Resize(int size);
 
     int GetBufferSize()
     {
@@ -36,11 +35,11 @@ class RingBuffer
         // m_pFront = m_pRear;
     }
 
-    uint8_t* GetFrontPtr()
+    char* GetFrontPtr()
     {
         return m_pFront;
     }
-    uint8_t* GetRearPtr()
+    char* GetRearPtr()
     {
         return m_pRear;
     }
@@ -51,10 +50,10 @@ class RingBuffer
   private:
     static constexpr int DEFAULT_BUFFER_SIZE = 10000;
 
-    uint8_t* m_pFront;
-    uint8_t* m_pRear;
-    uint8_t* m_pEndOfBuffer;
+    char* m_pFront;
+    char* m_pRear;
+    char* m_pEndOfBuffer;
 
+    char* m_buffer;
     int m_bufferSize;
-    uint8_t* m_buffer;
 };
